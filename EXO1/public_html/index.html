@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TP1_CARREE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #main{
+                background-color: black;
+                height: 100px;
+                width: 400px;
+                margin-left: 30px;
+                margin-top: 30px;
+                padding-top: 20px;
+            }
+            .norm{
+                color: white;
+            }
+            #input{
+                color: black;
+                background: red;
+                    
+            }
+            #result{
+                color: black;
+                background: green;
+            }
+            
+        </style>
+        <script>
+            function calc(){
+                 document.getElementById('input').innerHTML ="";
+         document.getElementById('result').innerHTML ="";
+         var resul=document.getElementById('en').value;
+         var result=parseFloat(resul);
+         if (isNaN(result)){
+              alert(resul +" n'est pas un nombre,entrez un nombre");
+         
+     }else{
+        document.getElementById('input').innerHTML += result;
+         document.getElementById('result').innerHTML += result*result;
+     }
+        
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <section id="main">
+                <label class="norm">entrer un nombre</label>
+                <input type="text" name="en" id="en">
+                <input type="button" value="calculate" onclick="calc()">
+                <br><br>
+                <label class="norm">le caree de</label>
+                <label id=input></label>
+                <label class="norm">est</label>
+                <label id="result"></label>
+                
+            </section>
+        </div>
+    </body>
+</html>
